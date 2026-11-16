@@ -1,0 +1,1184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abhishek Raj - Industrial Engineer, Entrepreneur and Founder of ARIAM.">
+<title>Abhishek Raj | Engineer & Entrepreneur</title>
+
+<style>
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+:root {
+    --navy: #203744;
+    --navy-light: #304c5b;
+    --accent: #c5a46d;
+    --background: #f7f8f8;
+    --white: #ffffff;
+    --text: #26343b;
+    --muted: #77848a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.section-subtitle {
+    color: var(--muted);
+    margin-bottom: 45px;
+}
+
+.accent-line {
+    width: 55px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 22px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #e0e7eb;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: var(--navy);
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    right: -100px;
+    top: 50px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 80px 0;
+}
+
+.hero-label {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-role {
+    font-size: 19px;
+    color: #d1dce1;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: #c3d0d6;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 27px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: white;
+}
+
+.btn-outline {
+    border: 1px solid #d2dce1;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.about-text p {
+    color: #59676e;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.about-highlight {
+    background: white;
+    padding: 35px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+}
+
+.about-highlight h3 {
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.highlight-item {
+    margin-bottom: 18px;
+}
+
+.highlight-item strong {
+    display: block;
+    color: var(--navy);
+}
+
+.highlight-item span {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience {
+    background: #edf1f2;
+}
+
+.timeline {
+    max-width: 900px;
+    border-left: 2px solid #c9b38c;
+    margin-left: 10px;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 42px;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: absolute;
+    left: -42px;
+    top: 8px;
+}
+
+.timeline-item h3 {
+    color: var(--navy);
+    font-size: 20px;
+}
+
+.timeline-item h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.timeline-meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.timeline-item p {
+    color: #58666d;
+    font-size: 15px;
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    background: white;
+    padding: 30px;
+    border-bottom: 3px solid transparent;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--accent);
+}
+
+.education-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: #68767d;
+    font-size: 14px;
+}
+
+.education-card .year {
+    color: #a18451;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+    background: var(--navy);
+    color: white;
+}
+
+.skills .section-heading {
+    color: white;
+}
+
+.skills .section-subtitle {
+    color: #bdcbd1;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.04);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background: var(--navy-light);
+    transform: translateY(-4px);
+}
+
+.skill-card h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.skill-card p {
+    color: #d0dadd;
+    font-size: 14px;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certification-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.certification-item {
+    background: white;
+    padding: 20px;
+    border-left: 3px solid var(--accent);
+    font-size: 15px;
+    color: var(--navy);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    background: #edf1f2;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-content p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #182b35;
+    color: #bdc9ce;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--accent);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 25px 5%;
+        gap: 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .education-grid,
+    .skills-grid,
+    .certification-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-item::before {
+        left: -32px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            ABHISHEK RAJ<span>.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content reveal">
+
+            <div class="hero-label">
+                Engineer | Entrepreneur | Business Builder
+            </div>
+
+            <h1>
+                Abhishek <span>Raj</span>
+            </h1>
+
+            <div class="hero-role">
+                OPEX Industrial Engineer | Founder - ARIAM
+            </div>
+
+            <p class="hero-description">
+                An engineer with a strong interest in building
+                businesses, structuring operations and transforming
+                ideas into scalable enterprises. Combining engineering
+                knowledge with entrepreneurial thinking to create
+                sustainable industrial ventures.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">
+                    Explore My Profile
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-text reveal">
+
+                <div class="accent-line"></div>
+
+                <h2 class="section-heading">About Me</h2>
+
+                <p>
+                    I’m an Engineer with a strong interest in building
+                    and shaping businesses. I’m naturally drawn toward
+                    decision-making, structuring operations, and taking
+                    ownership of outcomes.
+                </p>
+
+                <p>
+                    I see manufacturing as more than machines on a
+                    factory floor. It is about how resources are
+                    allocated, how risks are managed, and how execution
+                    turns into growth.
+                </p>
+
+                <p>
+                    My professional journey spans industrial engineering,
+                    manufacturing technology, project execution and
+                    entrepreneurial ventures. I am motivated by
+                    responsibility and the challenge of turning plans
+                    into working enterprises.
+                </p>
+
+                <p>
+                    Currently pursuing a Bachelor of Business
+                    Administration in Digital Business and
+                    Entrepreneurship at the Indian Institute of
+                    Management Bangalore.
+                </p>
+
+            </div>
+
+            <div class="about-highlight reveal">
+
+                <h3>Professional Snapshot</h3>
+
+                <div class="highlight-item">
+                    <strong>Current Position</strong>
+                    <span>OPEX Industrial Engineer</span>
+                </div>
+
+                <div class="highlight-item">
+                    <strong>Entrepreneurial Venture</strong>
+                    <span>Founder – ARIAM</span>
+                </div>
+
+                <div class="highlight-item">
+                    <strong>Industry Focus</strong>
+                    <span>Manufacturing & Industrial Operations</span>
+                </div>
+
+                <div class="highlight-item">
+                    <strong>Location</strong>
+                    <span>Mysuru, Karnataka, India</span>
+                </div>
+
+                <div class="highlight-item">
+                    <strong>Academic Institution</strong>
+                    <span>IIM Bangalore</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="section experience" id="experience">
+    <div class="container">
+
+        <div class="accent-line"></div>
+
+        <h2 class="section-heading">Professional Experience</h2>
+
+        <p class="section-subtitle">
+            My professional journey across engineering,
+            manufacturing and entrepreneurship.
+        </p>
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+
+                <h3>ARIAM</h3>
+                <h4>Group Founder</h4>
+
+                <div class="timeline-meta">
+                    January 2026 – Present | Mysuru, Karnataka
+                </div>
+
+                <p>
+                    ARIAM is a privately structured industrial venture
+                    focused on building scalable manufacturing and
+                    essential supply infrastructure. The enterprise
+                    is driven by engineering depth, operational
+                    discipline and long-term capital-intensive
+                    execution across high-impact industrial sectors.
+                    Currently under structured development and
+                    strategic rollout in Karnataka.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>6SQUARES</h3>
+                <h4>Co-Founder | Managing Partner</h4>
+
+                <div class="timeline-meta">
+                    January 2024 – Present | Udupi, Karnataka
+                </div>
+
+                <p>
+                    Precision manufacturing job-work unit
+                    specializing in CNC Laser Cutting and CNC Router
+                    services for industrial and OEM clients.
+                    Overseeing end-to-end operations including
+                    machine procurement, vendor evaluation,
+                    production planning, client acquisition and
+                    B2B business development.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>CMTI – Central Manufacturing Technology Institute</h3>
+                <h4>Engineer</h4>
+
+                <div class="timeline-meta">
+                    August 2024 – September 2025 | Bengaluru, Karnataka
+                </div>
+
+                <p>
+                    Worked under mentorship in the Aero-lap Polishing
+                    Machine Development Project, focusing on surface
+                    finishing research and process improvement.
+                    Gained hands-on exposure to media mixing,
+                    polishing experiments, performance evaluation,
+                    force measurement and material testing.
+                    Assisted in technical reporting, documentation
+                    and team presentations.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>Central Institute of Petrochemicals Engineering
+                    & Technology (CIPET)</h3>
+
+                <h4>Project Engineer</h4>
+
+                <div class="timeline-meta">
+                    2023 – 2024
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>Manipal Institute of Technology</h3>
+                <h4>Student Coordinator</h4>
+
+                <div class="timeline-meta">
+                    October 2020 – October 2022 | Manipal
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+    <div class="container">
+
+        <div class="accent-line"></div>
+
+        <h2 class="section-heading">Education</h2>
+
+        <p class="section-subtitle">
+            An interdisciplinary academic foundation in
+            engineering, technology and business.
+        </p>
+
+        <div class="education-grid">
+
+            <div class="education-card reveal">
+
+                <h3>Indian Institute of Management Bangalore</h3>
+
+                <p>
+                    Bachelor of Business Administration
+                    <br>
+                    Digital Business & Entrepreneurship
+                </p>
+
+                <div class="year">
+                    August 2026 – August 2029
+                </div>
+
+            </div>
+
+
+            <div class="education-card reveal">
+
+                <h3>Visvesvaraya Technological University</h3>
+
+                <p>
+                    Master of Technology (M.Tech)
+                    <br>
+                    Tool Engineering
+                </p>
+
+                <div class="year">
+                    March 2023 – July 2024
+                </div>
+
+            </div>
+
+
+            <div class="education-card reveal">
+
+                <h3>Manipal Institute of Technology</h3>
+
+                <p>
+                    Bachelor of Technology (B.Tech)
+                    <br>
+                    Industrial Engineering
+                    (formerly Industrial & Production Engineering)
+                </p>
+
+                <div class="year">
+                    June 2019 – July 2022
+                </div>
+
+            </div>
+
+
+            <div class="education-card reveal">
+
+                <h3>Dr. T.M.A. Pai Polytechnic, Manipal</h3>
+
+                <p>
+                    Diploma in Engineering
+                    <br>
+                    Mechatronics
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="section skills" id="skills">
+    <div class="container">
+
+        <div class="accent-line"></div>
+
+        <h2 class="section-heading">Skills & Competencies</h2>
+
+        <p class="section-subtitle">
+            Technical capabilities and business-oriented competencies.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card reveal">
+                <h3>Industrial Engineering</h3>
+                <p>
+                    Operations Excellence, Production Planning,
+                    Manufacturing Processes and Process Improvement.
+                </p>
+            </div>
+
+            <div class="skill-card reveal">
+                <h3>Entrepreneurship</h3>
+                <p>
+                    Business Development, Venture Creation,
+                    Strategic Thinking and Intellectual Property.
+                </p>
+            </div>
+
+            <div class="skill-card reveal">
+                <h3>Mechanical Design</h3>
+                <p>
+                    Computer-Aided Mechanical Drawing,
+                    Product Design and Development.
+                </p>
+            </div>
+
+            <div class="skill-card reveal">
+                <h3>Manufacturing Technology</h3>
+                <p>
+                    CNC Machining, Laser Cutting, Tool Engineering
+                    and Surface Finishing.
+                </p>
+            </div>
+
+            <div class="skill-card reveal">
+                <h3>Business Operations</h3>
+                <p>
+                    Business Operations, Analytics,
+                    Vendor Evaluation and Resource Management.
+                </p>
+            </div>
+
+            <div class="skill-card reveal">
+                <h3>Technical Software</h3>
+                <p>
+                    SolidWorks, CATIA, Siemens NX,
+                    MasterCAM, MATLAB and CMM.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CERTIFICATIONS & ACHIEVEMENTS -->
+
+<section class="section" id="achievements">
+
+    <div class="container">
+
+        <div class="accent-line"></div>
+
+        <h2 class="section-heading">
+            Certifications & Achievements
+        </h2>
+
+        <p class="section-subtitle">
+            Selected certifications and academic distinctions.
+        </p>
+
+        <div class="certification-list">
+
+            <div class="certification-item reveal">
+                Product Design and Development - IIT Roorkee
+            </div>
+
+            <div class="certification-item reveal">
+                Introduction to Programming with MATLAB
+            </div>
+
+            <div class="certification-item reveal">
+                Entrepreneurship and IP Strategy IIT khargapur
+            </div>
+
+            <div class="certification-item reveal">
+                Business Operations and Analytics- IIM Mumbai
+            </div>
+
+            <div class="certification-item reveal">
+                MTech Academic Distinction: 10.0 SGPA
+            </div>
+
+            <div class="certification-item reveal">
+                BTech Academic Distinction: 10.0 GPA
+            </div>
+
+            <div class="certification-item reveal">
+                Academic Distinction: Diploma in Mechatronics Engineering
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+    <div class="container contact-content reveal">
+
+        <div class="accent-line" style="margin: auto auto 22px;"></div>
+
+        <h2 class="section-heading">Let's Connect</h2>
+
+        <p>
+            Interested in manufacturing, entrepreneurship,
+            business development and building meaningful ventures.
+            Always open to professional conversations,
+            collaborations and new opportunities.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:work.abhishekraj@outlook.com"
+               class="btn btn-primary">
+                Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/iabhishekraj"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline"
+               style="background:var(--navy);">
+                LinkedIn Profile
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © <span id="currentYear"></span> Abhishek Raj.
+        Designed with purpose.
+    </p>
+
+    <p style="margin-top:5px;">
+        Engineer by foundation. Entrepreneur by ambition.
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Mobile Navigation
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+
+    const isOpen = navLinks.classList.toggle("show");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+    menuToggle.innerHTML = isOpen ? "&times;" : "☰";
+
+});
+
+// Close mobile menu after selecting a section
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("show");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+
+// Scroll Reveal Animation
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+// Dynamic Copyright Year
+
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+
+// Active Navigation Link
+
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+
+            currentSection = section.getAttribute("id");
+
+        }
+
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
